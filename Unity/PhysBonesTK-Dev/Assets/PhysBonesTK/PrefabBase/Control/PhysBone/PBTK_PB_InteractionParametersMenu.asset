@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: PBTK_PB_InteractionParametersMenu
+  m_EditorClassIdentifier: 
+  controls:
+  - name: CollisionRadius Max10cm
+    icon: {fileID: 0}
+    type: 203
+    parameter:
+      name: PBTK_Command
+    value: 33
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: PB_CollisionRadius
+    labels: []
+  - name: AllowCollision
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: PB_AllowCollision
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: AllowGrabbing
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: PB_AllowGrabbing
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: AllowPosing
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: PB_AllowPosing
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: GrabMovement
+    icon: {fileID: 0}
+    type: 203
+    parameter:
+      name: PBTK_Command
+    value: 33
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: PB_GrabMovement
+    labels: []
+  - name: MaxStretch [0.0-5.0]
+    icon: {fileID: 0}
+    type: 203
+    parameter:
+      name: PBTK_Command
+    value: 33
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: PB_MaxStretch
+    labels: []
