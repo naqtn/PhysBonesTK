@@ -6,16 +6,16 @@ You can tune PhysBone parameters at runtime (i.e. in-game).
 
 ## Demo avatars / Basic instruction
 
-Demo avatars are available in this world.
-https://vrchat.com/home/launch?worldId=wrld_1935fd5a-ff63-4cfa-92c9-21f22f850e74
+Demo:
 
-You can change PhysBone parameters via Expression Menu.
-
-The bones controlled by PhysBone are on right arm of demo avatars.
-(So, if you are in desktop mode, pickup something in the world to test.)
+- Demo avatars are available in [this world](https://vrchat.com/home/launch?worldId=wrld_1935fd5a-ff63-4cfa-92c9-21f22f850e74) .
+- The bones controlled by PhysBone are on right arm of demo avatars.
+- You can change PhysBone parameters via Expression Menu.
+- (if you are in desktop mode, pickup something in the world to test.)
 
 
 Menus:
+
 - "Example Configs": for loading example preset parameter configs
 - "Movement parameters": for physical parameters of PhysBone. (Pull, Spring, etc. )
 - "Interaction parameters": for interaction parameters of PhysBone. (CollisionRadius, AllowGrabbing, etc.)
@@ -23,10 +23,14 @@ Menus:
 
 
 Parameter values:
-Followings are the relation of value of animation parameters and actual parameter value of PhysBone.
-(so you can setup your PhysBone directly after tuning them with PhysBonesTK.)
 
-- basically liner. 0% => 0, 50% => 0.5, 100% => 1.0
+In this section, we explain the relation of percentage value showen in expression menus and actual parameter value of PhysBone.
+so you can setup your PhysBone directly after tuning them with PhysBonesTK.
+
+Basic relation is 0% => 0, 50% => 0.5, 100% => 1.0
+
+Following are exceptions of this basic relation.
+
 - "Gravity":
   - if "Narrow Range" is off: 0% => 0, 100% => 1.0 
   - if "Narrow Range" is on:  0% => 0, 100% => 0.1 
@@ -46,11 +50,12 @@ PhysBoneTK has tow types of usage:
 2. For avatar accessory item (PhysBone drives bone of separated item bone)
 
 The latter has additional features, for instance,
+
 - Show or hide toggle
 - World constraint to place the item
 - Scale control to change item size
 
-(I added them for making test environment and/or just for fun. )
+(I added them for making test environment and/or just for fun, not technical reqirement related to PhysBone. )
 
 
 ### Basic installation of "Avatar Body Bone" usage
@@ -102,11 +107,11 @@ you can do with "Avatar Body Bone" usage even if you want use with separated bon
   5. Press "Zero" button of `ParentConstraint` component. (You'll see your item moves to `attachPoint`)
   6. (Adjust the position and rotation of `attachPoint` again if you feel it doesn't fit.)
 5. Setup avatar descriptor
-  7.  Open your `VRCAvatarDescriptor` in the Inspector.
-  8.  Open `Assets/PhysBonesTK/ForAvatarAccessoryItem` folder in the Project window to pick following assets.
-  9.  Put `PBTK_Controller` asset to `VRCAvatarDescriptor/PlayableLayers/Base/FX`
-  10. Put `PBTK_Menu` asset to `VRCAvatarDescriptor/Expressions/Menu`
-  11. Put `PBTK_Parameters` asset to `VRCAvatarDescriptor/Expressions/Parameters`
+  1.  Open your `VRCAvatarDescriptor` in the Inspector.
+  2.  Open `Assets/PhysBonesTK/ForAvatarAccessoryItem` folder in the Project window to pick following assets.
+  3.  Put `PBTK_Controller` asset to `VRCAvatarDescriptor/PlayableLayers/Base/FX`
+  4. Put `PBTK_Menu` asset to `VRCAvatarDescriptor/Expressions/Menu`
+  5. Put `PBTK_Parameters` asset to `VRCAvatarDescriptor/Expressions/Parameters`
 
 The finished structure will be like this:
 
@@ -125,7 +130,7 @@ The finished structure will be like this:
 
 Note:
 - GameObject name is essential because animations use them.
-- You must use identical names and structure (or edit correspondent animation clips).
+- Thus, You must use identical names and structure (or edit correspondent animation clips).
 - In the above structure figure, GameObject names beginning with large letter denotes this naming rule.
 
 
